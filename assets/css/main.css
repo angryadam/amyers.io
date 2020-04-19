@@ -12,7 +12,8 @@ html, body, div, span,  h1, h2, h3, h4, h5, h6, p, em, img, strong, b, u, i, cen
 
 #one, #two, #three, #four {
 	/*rgba(32,26,22,.7)*/
-	background-color: rgba(255, 255, 255,.7);
+	background-color: rgba(255, 255, 255,.5);
+	border-radius: 2px;
 }
 
 #two {
@@ -38,8 +39,8 @@ html, body, div, span,  h1, h2, h3, h4, h5, h6, p, em, img, strong, b, u, i, cen
 	width: 100%;
 }
 
-#header-text {
-	background-color: rgba(32,26,22,.5);
+#header-text, #five {
+	background-color: rgba(32,26,22,.8);
 	padding: 1em;
 }
 
@@ -62,6 +63,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
 	line-height: 1;
 	margin: 0;
+}
+
+body:after{
+      content:"";
+      position:fixed; /* stretch a fixed position to the whole screen */
+      top:0;
+      height:100vh; /* fix for mobile browser address bar appearing disappearing */
+      left:0;
+      right:0;
+      z-index:-1; /* needed to keep in the background */
+      background-image: linear-gradient(to top, rgba(32,26,22,.5), rgba(32,26,22,.5)), url("../../images/seattle.jpg");
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
 }
 
 ol, ul {
@@ -784,7 +800,7 @@ body {
 
 body {
 	background-color: #2e3141;
-	background-image: linear-gradient(to top, rgba(32,26,22,.5), rgba(32,26,22,.5)), url("../../images/mopop.jpg");
+	background-image: linear-gradient(to top, rgba(32,26,22,.5), rgba(32,26,22,.5)), url("../../images/seattle.jpg");
 	background-size: auto, cover;
 	background-attachment: fixed, fixed;
 	background-position: center, center;
@@ -1274,6 +1290,7 @@ section.special, article.special {
 	transform: translateY(0);
 	opacity: 1;
 	margin: 0 0 1.3em 0;
+	border-radius: 2px;
 }
 
 #banner .logo .icon {
@@ -1564,7 +1581,7 @@ body.is-loading #banner p {
 }
 
 .wrapper.spotlight .image {
-	border-radius: 100%;
+	border-radius: 20%;
 	margin: 0 3em 2em 0;
 	width: 22em;
 	overflow: hidden;
@@ -1572,7 +1589,6 @@ body.is-loading #banner p {
 }
 
 .wrapper.spotlight .image img {
-	border-radius: 100%;
 	width: 100%;
 }
 

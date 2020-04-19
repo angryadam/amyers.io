@@ -164,3 +164,7 @@
 	});
 
 })(jQuery);
+
+// LAZY LOADING OF IMAGES
+const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
